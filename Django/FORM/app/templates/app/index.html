@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>App</title>
+    </head>
+    <body style="background-color: aqua; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <h1>Index Page</h1>
+        <form action="" method="post" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="submit">
+        </form>
+        <h2>{{ message }}</h2>
+        {% if request.POST %}
+            <ul>
+                <li>Name: {{ user.name }}</li>
+                <li>Password: {{ user.password }}</li>
+                <li>Age: {{ user.age }}</li>
+                <li>Date Of Birth: {{ user.dateOfBirth }}</li>
+                <li>Quote: {{ user.quote }}</li>
+            </ul>
+        {% endif %}
+    </body>
+</html>

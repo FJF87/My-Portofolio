@@ -1,0 +1,17 @@
+{% extends "forum/layout.html" %}
+
+{% block body %}
+    <h2>Show Forum page</h2>
+    <ul>
+        {% for post in forum %}
+            <li>
+                <b><i>Username: {{post.name}}</i></b>
+                <b>{{post.date}} {{post.time}}</b>
+                <p>{{post.comment}}</p>
+            </li>
+        {% empty %}
+            <h3>No post yet!</h3>
+        {% endfor %}
+    </ul>
+    {{ message }}
+{% endblock %}

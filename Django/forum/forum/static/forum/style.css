@@ -1,0 +1,39 @@
+:root {
+    --smallText: 2vw;
+    --normalText: 2.5vw;
+    --bigText: 3vw;
+
+    --smallSize: 1vw;
+    --normalSize: 2vw;
+    --bigSize: 3vw;
+}
+
+body {
+    /* background-color: red; */
+    font-size: var(--smallText);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    font-family: 'Lucida Sans';
+    font-size: var(--bigText);
+    margin: var(--normalSize);
+}
+
+nav {
+    margin: var(--normalSize);
+}
+
+a {
+    margin: var(--smallSize);
+}
+
+li {
+    list-style-type: none;
+}

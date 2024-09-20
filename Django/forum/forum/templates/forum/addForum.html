@@ -1,0 +1,10 @@
+{% extends "forum/layout.html" %}
+
+{% block body %}
+    <h2>Forum page</h2>
+    <form action="{% url 'forum:addForum' %}" method="POST">
+        {% csrf_token %}
+        {{form}}
+        <input type="submit" value="upload">
+    </form>
+{% endblock %}

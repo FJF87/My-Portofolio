@@ -1,0 +1,11 @@
+{% extends 'forum/layout.html' %}
+
+{% block body %}
+    <h2>Login page</h2>
+    <form action="{% url 'forum:login' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="login">
+    </form>
+    {{ message }}
+{% endblock %}

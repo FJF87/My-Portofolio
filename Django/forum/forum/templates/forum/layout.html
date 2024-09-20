@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Forum App</title>
+        <link href="{% static 'forum/style.css' %}" rel="stylesheet">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Forum</h1>
+            <nav class="btn-group">
+                <!-- <a href="">Index</a> -->
+                <a href="{% url 'forum:login' %}">
+                    <button type="button" class="btn btn-primary">Login</button>
+                </a>
+                <a href="{% url 'forum:addForum' %}">
+                    <button type="button" class="btn btn-primary">Add Forum</button>
+                </a>
+                <a href="{% url 'forum:showForum' %}">
+                    <button type="button" class="btn btn-primary">Show Forum</button>
+                </a>
+                <a href="{% url 'forum:logout' %}">
+                    <button type="button" class="btn btn-primary">Logout</button>
+                </a>
+            </nav>
+            <h2>
+                {% if request.session.activeUser %}
+                    {{ request.session.activeUser }}
+                {% else %}
+                    Username
+                {% endif %}
+            </h2>
+        </header>
+        <main>
+            {% block body %}
+            {% endblock %}
+        </main>
+    </body>
+</html>
