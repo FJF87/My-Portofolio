@@ -1,0 +1,18 @@
+Nama,jenis,stok,harga per item
+choco cake,makanan,10,30000
+rainbow cake,makanan,10,30000
+red velvet cake,makanan,10,30000
+apple pie,makanan,10,25000
+sandwich,makanan,10,15000
+expresso,minuman,10,20000
+cappucino,minuman,10,25000
+ice tea,minuman,10,23000
+thai tea,minuman,10,25000
+milk,minuman,10,20000
+mineral water,minuman,10,10000
+indonesian coffee,minuman,10,38000
+cafe latte,minuman,10,33000
+caramel latte,minuman,10,38000
+vietnamese coffee,minuman,10,38000
+nasi goreng,makanan,10,15
+Apple pie,makanan,19,15000

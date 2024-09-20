@@ -1,0 +1,9 @@
+ID, {YYYY, MM, DD, Hours, Minutes, Second}, JumItem, {Jenis Item, Nama Item, Item yang Dibeli, Harga Per Item}, Total Pembayaran, NamaKasir
+1, {2023, 12, 18, 15, 30, 34}, 3, {{minuman, latte, 1, 25000}, {makanan, choco cake, 1, 30000}, {minuman, expresso, 1, 20000}}, 75000, Bejo Subejo
+2, {2023, 12, 18, 10, 45, 8}, 1, {{minuman, latte, 2, 25000}}, 50000, Bambang Sutarjo
+3, {2023, 12, 18, 10, 0, 12}, 2, {{makanan, choco cake, 1, 30000}, {minuman, cappucino, 1, 25000}}, 55000, Bejo Subejo
+4, {2023, 12, 18, 8, 0, 19}, 1, {{makanan, choco cake, 2, 30000}}, 60000, Budi Suparno
+5, {2023, 12, 18, 16, 15, 0}, 1, {{makanan, red velvet, 1, 30000}}, 30000, Bejo Subejo
+6, {2023, 12, 18, 13, 40, 10}, 1, {{makanan, sandwich, 1, 15000}}, 15000, Bambang Sutarjo
+7, {2023, 12, 18, 14, 20, 6}, 2, {{makanan, sandwich, 1, 15000}, {minuman, vietnamese coffee, 1, 38000}}, 53000, Budi Suparno
+8, {2023, 12, 21, 17, 28, 11}, 2, {{Nasi Goreng, makanan, 1, 15000},{Rokok, makanan, 1, 20000}}, 4261294, Bejo
