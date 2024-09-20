@@ -1,0 +1,18 @@
+{% extends "loginApp/layout.html" %}
+
+{% block body %}
+    <h1>Sign In Page</h1>
+    <form action="{% url 'loginApp:signIn' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="sign in">
+    </form>
+    <ul>
+        {% for msg in messages %}
+            <li>
+                <h3>{{ msg }}</h3>
+            </li>
+        {% endfor %}
+        <h3>{{ message }}</h3>
+    </ul>
+{% endblock %}

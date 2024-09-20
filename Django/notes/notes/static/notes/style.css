@@ -1,0 +1,19 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    font-family: 'Gill Sans';
+}
+
+li {
+    margin: 2em 2em;
+    list-style-type: none;
+    background-color: aquamarine;
+}
+
+a {
+    background-color: magenta;
+    padding: 1em 1em 1em 1em;
+    margin: 2em 2em 2em 2em;
+}

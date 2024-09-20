@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Notes App</title>
+        <link href="{% static 'notes/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <a href="{% url 'notes:homepage' %}">Homepage</a>
+            <a href="{% url 'notes:addNotes' %}">Add Notes</a>
+            <a href="{% url 'notes:viewNotes' %}">View Notes</a>
+        </nav>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

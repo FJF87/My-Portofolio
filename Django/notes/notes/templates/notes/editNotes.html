@@ -1,0 +1,10 @@
+{% extends 'notes/layout.html' %}
+
+{% block body %}
+    <h2>Edit Note Page</h2>
+    <form action="{% url 'notes:editNotes' noteID %}" method="POST">
+        {% csrf_token %}
+        {{ note }}
+        <input type="submit" value="edit note">
+    </form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "loginApp/layout.html" %}
+
+{% block body %}
+    <h1>Login Page</h1>
+    <form action="{% url 'loginApp:login' %}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="login">
+    </form>
+    <p>
+        <h3>{{ message }}</h3>
+    </p>
+{% endblock %}

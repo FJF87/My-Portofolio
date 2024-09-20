@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login App</title>
+        <link rel="stylesheet" href="{% static 'loginApp/style.css' %}">
+    </head>
+    <body>
+        <nav>
+            <a href="{% url 'loginApp:login' %}">Login</a>
+            <a href="{% url 'loginApp:signIn' %}">Sign In</a>
+            <a href="{% url 'loginApp:mainPage' %}">Main Page</a>
+            <a href="{% url 'loginApp:logout' %}">Logout</a>
+        </nav>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
