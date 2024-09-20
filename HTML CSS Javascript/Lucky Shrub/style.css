@@ -1,0 +1,116 @@
+* {
+    margin: 0.5em;
+    padding: 0;
+}
+
+#logo {
+    height: 8em;
+    width: 5em;
+}
+
+nav {
+    background-color: #f8ba8c;
+    padding: 1.5em;
+}
+
+nav a {
+    padding: 1em;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a:hover {
+    background-color: rgba(255, 166, 0, 0.806);
+    color: aqua;
+}
+
+nav a:visited {
+    background-color: none;
+    color: blue;
+}
+
+nav a:link {
+    background-color: none;
+    color: blue;
+}
+
+nav a:active {
+    background-color: orange;
+    color: rgb(0, 187, 255);
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 5em 1em 5em;
+}
+
+#banner:hover {
+    background-color: rgb(14, 217, 31);
+    box-shadow: 0 0 5px black;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% 10% 2% 10%;
+    background-color: rgb(0, 203, 14);
+    color: black;
+}
+
+#artc {
+    padding: 0 0 1em 0;
+}
+
+#artc:hover {
+    background-color: rgb(14, 217, 31);
+    box-shadow: 0 0 5px black;
+}
+
+#flexbox-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5em;
+}
+
+#flexbox-container article {
+    flex: 15vw;
+}
+
+article img {
+    height: 10em;
+    width: 90%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+article a {
+    margin: 0 0 0 2vw;
+}
+
+#flexbox-footer {
+    display: flex;
+    align-items: center;
+    gap: 50vw;
+}
+
+#flexbox-footer img {
+    max-width: 100%;
+    max-height: 3em;
+}

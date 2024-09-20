@@ -1,0 +1,345 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+body {
+    background-color: hsl(202, 86%, 94%);
+}
+
+main {
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20vh 20vw;
+}
+
+input[type='radio'] {
+    /* accent-color: hsl(61, 70%, 52%); */
+    display: none;
+}
+
+#customRadioButton {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+
+input[type='radio']:checked + #customRadioButton {
+    background-color: yellow;
+    border-color: yellow;
+}
+
+label:has(> input[type='radio']:checked) {
+    /* border-radius: 30px; */
+    background-color: rgb(255, 255, 200);
+}
+
+#dollarSign {
+    display: inline;
+}
+
+#years {
+    display: inline;
+}
+
+#percentSymbol {
+    display: inline;
+}
+
+#topCalculatorPart {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#calcTopPart {
+    margin: 10px 5px;
+}
+
+#mortgageTerm {
+    display: inline;
+    width: 50%;
+}
+
+#mortgageAmount {
+    display: inline;
+    width: 100%;
+}
+
+#interestRate {
+    display: inline;
+    width: 64%;
+}
+
+#leftPanel {
+    margin: 2vh 3vw;
+    width: 50%;
+}
+
+#calcMidPart {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#calcEndPart {
+    margin: 10px 5px;
+}
+
+#clearButton {
+    font-size: 14px;
+    color: grey;
+}
+
+#calculateButton {
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    outline: none;
+    border-width: 0;
+    margin: 20px 10px;
+    padding: 10px;
+    width: 90%;
+    background-color: hsl(61, 70%, 52%);
+}
+
+#calculateButton > img {
+    width: 15px;
+    height: auto;
+    padding: 0 10px;
+}
+
+#rightPanel {
+    display: flex;
+    height: 100%;
+    background-color: hsl(202, 55%, 16%);
+    border-radius: 0 30px 30px 50px;
+    padding: 20vh 2vw 20vh;
+    width: 50%;
+}
+
+#emptyImage {
+    width: 10vw;
+    height: auto;
+}
+
+#descriptionArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.input {
+    /* border-color: aqua; */
+    padding: 10px;
+    margin: 5px 0px;
+    outline: none;
+    /* border-color: rgb(208, 208, 208); */
+    border-width: 1px;
+    width: 100%;
+}
+
+.inputIdle {
+    border-color: rgb(208, 208, 208)
+}
+
+.inputAlert {
+    border: 2px solid red;
+}
+
+.input:focus {
+    border: 2px solid hsl(61, 70%, 52%);
+}
+
+.inputNoLeftBorder {
+    border-left-width: 0;
+}
+
+.inputNoRightBorder {
+    border-right-width: 0;
+}
+
+.leftRounded {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.rightRounded {
+    border-radius: 0px 5px 5px 0px;
+}
+
+.icon {
+    margin: 5px 0px;
+    padding: 10px;
+}
+
+.iconWithoutBorder {
+    border: none;
+}
+
+.iconNoLeftBorder {
+    border: 1px solid rgb(208, 208, 208);
+    border-left-width: 0;
+}
+
+.iconNoRightBorder {
+    border: 1px solid rgb(208, 208, 208);
+    border-right-width: 0;
+}
+
+/* .radio {
+    padding: 5px;
+    outline: none;
+} */
+
+.radioOutline {
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+.radioOutlineUnselected {
+    border: 2px solid grey;
+}
+
+.radioOutlineSelected {
+    border: 2px solid yellow;
+}
+
+/* .radioUnselected {
+    
+}
+
+.radioSelected {
+    border: 2px solid yellow;
+} */
+
+.limeBackground {
+    background-color: hsl(61, 70%, 52%);
+}
+
+.stale100Background {
+    background-color: hsl(202, 86%, 94%)
+}
+
+.alertBackground {
+    background-color: red;
+    color: white;
+}
+
+.displayAlert {
+    display: inline;
+    font-size: 10px;
+    color: red;
+}
+
+/* - Slate 100: hsl(202, 86%, 94%)
+- Slate 300: hsl(203, 41%, 72%)
+- Slate 500: hsl(200, 26%, 54%)
+- Slate 700: hsl(200, 24%, 40%)
+- Slate 900: hsl(202, 55%, 16%) */
+
+.disable {
+    display: none;
+}
+
+.stale300Color  {
+    color: hsl(203, 41%, 72%);
+}
+
+.whiteColor {
+    color: white;
+}
+
+.limeColor {
+    color: hsl(61, 70%, 52%);
+}
+
+#calculationResultArea {
+    margin: 5vh 2vw;
+    padding: 2vh 2vw;
+    background-color: hsl(200, 55%, 4%);
+    border-radius: 10px;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: hsl(61, 70%, 52%);
+}
+
+#monthlyRepaymentOrInterest {
+    margin: 2vh 0;
+    font-size: 50px;
+}
+
+#totalRepaymentOrInterest {
+    margin: 2vh 0;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: white;
+        width: 100%;
+    }
+    main {
+        display: block;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    #leftPanel {
+        border-radius: 0;
+        padding: 2vh 2vw;
+        width: 90%;
+    }
+    #rightPanel {
+        border-radius: 0;
+        padding: 2vh 2.5%;
+        width: 95%;
+    }
+    #calcMidPart {
+        display: block;
+    }
+    #calculateButton {
+        width: 95%;
+    }
+    #mortgageTerm {
+        width: 100%;
+    }
+    #interestRate {
+        width: 100%;
+    }
+    #emptyImage {
+        width: 40vw;
+        height: auto;
+    }
+    .attribution {
+        background-color: hsl(202, 55%, 16%);
+        color: hsl(203, 41%, 72%);
+    }
+}

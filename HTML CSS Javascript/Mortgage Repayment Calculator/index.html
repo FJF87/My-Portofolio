@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <main>
+    <article id="leftPanel">
+      <div id="topCalculatorPart">
+        <h1>Mortgage Calculator</h1>
+        <a href="#" id="clearButton">Clear All</a>
+      </div>
+
+      <div>
+        <div id="calcTopPart">
+          <label for="mortgageAmount">Mortgage Amount</label><br>
+          <div class="inputContainer">
+            <p id="dollarSign" class="icon iconNoRightBorder stale100Background leftRounded">$</p>
+            <input class="input inputIdle inputNoLeftBorder rightRounded" id="mortgageAmount" type="text" name="mortgageAmount" required>
+          </div>
+          <p id="mortgageAmountAlert" class="disable">This field is required</p>
+        </div>
+
+        <div id="calcMidPart">
+          <div style="margin: 5px;">
+            <label for="mortgageTerm">Mortgage Term</label><br>
+            <div class="inputContainer">
+              <input class="input inputIdle inputNoRightBorder leftRounded" id="mortgageTerm" type="text" name="mortgageTerm" required>
+              <p id="years" class="icon iconNoLeftBorder stale100Background rightRounded">years</p>
+            </div>
+            <p id="mortgageTermAlert" class="disable">This field is required</p>
+          </div>
+
+          <div style="margin: 5px; margin-right: 0;">
+            <label for="interestRate">Interest Rate</label><br>
+            <div class="inputContainer">
+              <input class="input inputIdle inputNoRightBorder leftRounded" id="interestRate" type="text" name="interestRate" required>
+              <p id="percentSymbol" class="icon iconNoLeftBorder stale100Background rightRounded">%</p>
+            </div>
+            <p id="interestRateAlert" class="disable">This field is required</p>
+          </div>
+        </div>
+
+        <div id="calcEndPart">
+          <label for="mortgageType">Mortgage Type</label><br>
+          <div id="radioContainer" class="radioOutline radioOutlineUnselected">
+            <label style="display: block;padding: 10px;">
+              <input class="radio" id="mortgageType" type="radio" name="mortgageType" value="repayment">
+              <div id="customRadioButton"></div>
+              Repayment
+            </label>
+          </div>
+          <div id="radioContainer" class="radioOutline radioOutlineUnselected">
+            <label style="display: block;padding: 10px;">
+              <input class="radio" id="mortgageType" type="radio" name="mortgageType" value="interestOnly">
+              <div id="customRadioButton"></div>
+              Interest Only
+            </label>
+          </div>
+          <p id="mortgageTypeAlert" class="disable">This field is required</p>
+        </div>
+      </div>
+  
+      <div>
+        <button id="calculateButton">
+          <img src="assets/images/icon-calculator.svg" alt="Calculator Icon">
+          Calculate Repayments
+        </button>
+      </div>
+    </article>
+  <!-- Empty results start -->
+  <div id="rightPanel">
+    <article id="descriptionArea">
+      <img id="emptyImage" src="assets/images/illustration-empty.svg" alt="Ilustration empty image">
+      <h2 class="whiteColor">Results shown here</h2>
+      <p class="stale300Color">
+        Complete the form and click “calculate repayments” to see what 
+        your monthly repayments would be.
+      </p>
+    </article>
+      <!-- Empty results end -->
+    
+      <!-- Completed results start -->
+    <article id="resultArea" style="display: none;">
+      <h2 class="whiteColor">Your results</h2>
+      <br>
+      <p class="stale300Color">
+        Your results are shown below based on the information you provided. 
+        To adjust the results, edit the form and click “calculate repayments” again.
+      </p>
+    
+      <div id="calculationResultArea">
+        <p style="margin: 2vh 0;" class="stale300Color">Your monthly repayments</p>
+        <p id="monthlyRepaymentOrInterest" class="limeColor">3</p>
+        <hr>
+        <p style="margin: 2vh 0;" class="stale300Color">Total you'll repay over the term</p>
+        <p id="totalRepaymentOrInterest" class="whiteColor">3</p>
+      </div>
+    </article>
+   </div>
+  <!-- Completed results end -->
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#sky {
+    width: 1000px;
+    height: 400px;
+    background-color: skyblue;
+}
+
+#soil {
+    width: 1000px;
+    height: 100px;
+    background-color: brown;
+}
+
+#player {
+    display: block;
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 350px;
+    left: 50px;
+}
+
+.playerJump {
+    animation-name: jump;
+    animation-duration: 1s;
+}
+
+#block {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 300px;
+    left: 950px;
+}
+
+.blockAnimation {
+    animation-name: blockMove;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* .blockAnimation {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 300px;
+    left: 950px;
+    animation-name: blockMove;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+} */
+
+@keyframes blockMove {
+    0% {
+        left: 950px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes jump {
+    0% {
+        top: 350px;
+    }
+    40% {
+        top: 250px;
+    }
+    60% {
+        top: 250px;
+    }
+    100% {
+        top: 350px;
+    }
+}

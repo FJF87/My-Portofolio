@@ -1,0 +1,28 @@
+<html lang="en">
+    <head>
+        <title>Mario</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <audio id="backsound">
+            <source src="soundtrack/mario-soundtrack.mp3" type="audio/mp3">
+        </audio>
+        <audio id="marioJumpSound">
+            <source src="soundtrack/maro-jump-sound.mp3" type="audio/mp3">
+        </audio>
+        <audio id="marioDeadSound">
+            <source src="soundtrack/mario-death.mp3" type="audio/mp3">
+        </audio>
+        <div id="board">
+            <div id="sky">
+                <!-- <div id="player"></div> -->
+                <!-- <div id="block"></div> -->
+                <img id="player" src="image/mario-idle.png" alt="mario">
+                <img id="block" src="image/block.jpg" alt="block">
+            </div>
+            <div id="soil"></div>
+        </div>
+        <button onclick="start()">Start Game</button>
+    </body>
+</html>

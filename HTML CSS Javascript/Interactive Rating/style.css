@@ -1,0 +1,102 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.textDescription {
+    color: hsl(217, 12%, 63%);
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: hsl(213, 19%, 18%);
+    border-width: 0;
+}
+
+#mainBlock {
+    background-color: hsl(216, 12%, 8%);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20vh 30vw 20vh 30vw;
+}
+
+#starIconDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#starIcon {
+    object-fit: cover;
+    margin: 25% 25%;
+    height: 50%;
+    width: 50%;
+}
+
+#numberButton {
+    margin: 2vh 0 2vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.circleButton:hover {
+    background-color: hsl(25, 97%, 53%);
+}
+
+.circleButtonSelected {
+    background-color: white;
+}
+
+#confirmButton {
+    padding: 2vh 5vw;
+    margin: 10px 0 10px 0;
+    width: 100%;
+    border-radius: 30px;
+    border-width: 0;
+    background-color: hsl(25, 97%, 53%);
+    color: black;
+}
+
+#confirmButton:hover {
+    background-color: white;
+}
+
+/* #ratingArticle {
+
+} */
+
+
+/* look out for this, you HARD CODE IT TO "NONE" */
+#thankyouArticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#selectionSummary {
+    margin: 3vh 0;
+    padding: 5px 20px;
+    font-size: 12px;
+    border-radius: 30px;
+    background-color: hsl(213, 19%, 18%);
+    color: hsl(25, 97%, 53%);
+}
+
+#numberSelected {
+    display: inline;
+}
+
+.disable {
+    display: none;
+}
+
+.enable {
+    display: block;
+}
