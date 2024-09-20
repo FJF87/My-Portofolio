@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Christmas Card Scrollable</string>
+    <string name="rudolf">Rudolf</string>
+    <string name="santa">Santa</string>
+    <string name="cookies">Cookies</string>
+    <string name="snowman">Snowman</string>
+    <string name="christmas_tree">Christmas Tree</string>
+    <string name="christmas_decoration">Christmas Decoration</string>
+</resources>
