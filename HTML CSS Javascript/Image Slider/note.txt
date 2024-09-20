@@ -1,0 +1,4 @@
+Image slider:
+make a div, that contain the image to be shown
+
+in the script, maybe use array to store the image, then display it using for loop

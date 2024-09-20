@@ -1,0 +1,10 @@
+color flipper, change color when a BUTTON is clicked
+
+in the HTML:
+a button to change the color
+a text to show the color code
+
+in the javascript:
+access the DOM to manipulate the background
+access the text color code in html, to change whenever a button is clicked
+use math random to determine the hex number to determine the color(use array that stores number 1-9, and A-F)
