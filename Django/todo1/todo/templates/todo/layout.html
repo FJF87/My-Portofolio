@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>To Do App</title>
+        <link href="{% static 'todo/globalStyle.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>To Do App</h1>
+        <nav>
+            <a href="{% url 'todo:index' %}">Index</a>
+            <a href="{% url 'todo:showTodo' %}">Todo List</a>
+            <a href="{% url 'todo:addTodo' %}">Add Todo</a>
+        </nav>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

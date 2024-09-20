@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Menus</title>
+        <link href="{% static 'app1/menu.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Our menu</h1>
+        <ul>
+            {% for menu in menulist %}
+                <li>
+                    <h2>{{menu.name}}</h2>
+                    <h3>{{menu.type}}</h3>
+                    <h3>$ {{menu.price}}</h3>
+                </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

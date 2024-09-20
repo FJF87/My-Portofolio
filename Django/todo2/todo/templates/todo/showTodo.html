@@ -1,0 +1,15 @@
+{% extends 'todo/layout.html' %}
+
+{% block body %}
+    <ul>
+        {% for todo in todoList %}
+            <li>
+                <h2>{{todo.name}}</h2>
+                <p>{{todo.description}}</p>
+            </li>
+        {% empty %}
+            <h2>Your to do list is currently empty</h2>
+            <p>Your to do list should appear here</p>
+        {% endfor %}
+    </ul>
+{% endblock %}

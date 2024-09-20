@@ -1,0 +1,18 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium';
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li {
+    background-color: aquamarine;
+    list-style-type: none;
+}

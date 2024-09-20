@@ -1,0 +1,43 @@
+body {
+    background-color: aqua;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5em;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li {
+    background-color: aquamarine;
+    list-style-type: none;
+    margin: 1em;
+    padding: 2em;
+}
+
+a {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2vh 2vw 2vh 2vw;
+}
+
+label {
+    display: block;
+    margin: 2vh 2vw 2vh 2vw;
+    align-self: center;
+}
+
+input {
+    display: block;
+    margin: 2vh 2vw 2vh 2vw;
+}
