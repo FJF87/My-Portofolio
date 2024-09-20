@@ -1,0 +1,647 @@
+:root {
+  --white: white;
+  --red: hsl(14, 86%, 42%);
+  --darkerRed: hsl(14, 86%, 30%);
+  --green: hsl(159, 69%, 38%);
+  --rose50: hsl(20, 50%, 98%);
+  --rose100: hsl(13, 31%, 94%);
+  --rose300: hsl(14, 25%, 72%);
+  --rose400: hsl(7, 20%, 60%);
+  --rose500: hsl(12, 20%, 44%);
+  --rose900: hsl(14, 65%, 9%);
+  --roundedButton: 50px;
+}
+
+body * {
+  display: inline;
+}
+
+body{
+  background-color: var(--rose100);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  margin: 5vw
+}
+
+#dessertMenu {
+  width: 75%;
+}
+
+#foodListCart {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  width: 100%;
+}
+
+#mainTitle {
+  display: block;
+  font-size: 3vw;
+}
+
+#cartItemList {
+  width: 25%;
+}
+
+article > section {
+  display: flex;
+  flex-direction: column;
+}
+
+section > img {
+  width: 20vw;
+  height: auto;
+}
+
+.addToCartButtonContainer {
+  position: relative;
+}
+
+.addToCartButton {
+  display: inline;
+  position: absolute;
+  bottom: 0.8vw;
+  left: 1vw;
+  width: 20vw;
+  height: 2vw;
+}
+
+.emptyCartButtonContainer {
+  padding: 1vw 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--roundedButton);
+  border-width: 1px;
+  border-color: var(--rose300);
+  position: absolute;
+  left: 0vw;
+}
+
+.emptyCartButtonContainer > img {
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+.emptyCartButtonContainer > span {
+  margin-left: 0.8vw;
+  display: inline;
+  font-weight: bold;
+  font-size: 1vw;
+}
+
+.emptyCartButtonContainer:hover {
+  background-color: var(--white);
+  border-width: 1.6px;
+  border-color: var(--rose400);
+  color: var(--red);
+}
+
+.cartButtonContainer {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1.5vw;
+  background-color: var(--red);
+  border-radius: var(--roundedButton);
+}
+
+.cartButtonContainer:hover {
+  color: var(--white);
+}
+
+.operationSymbol {
+  border-radius: 50%;
+  width: 2vw;
+  height: 2vw;
+  margin: 0.6vw;
+  /* padding: 1vw 1.5vw; */
+  padding: 0;
+  background-color: var(--red);
+  border-color: var(--white);
+  color: var(--white);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.operationSymbol:hover {
+  color: var(--rose500);
+  background-color: var(--white);
+}
+
+.operationSymbol > img {
+  width: 1vw;
+  height: 1vw;
+}
+
+.operationSymbol > img:hover {
+  filter: invert(16%) sepia(92%) saturate(3759%) hue-rotate(21deg) brightness(101%) contrast(88%);
+}
+
+.amountFood {
+  margin: 0 2vw;
+  font-size: 1.5vw;
+}
+
+#dessertType {
+  color: var(--rose300);
+  margin: 0.4vw;
+  font-size: 1.5vw;
+}
+
+#dessertName {
+  margin: 0.4vw;
+  font-size: 2vw;
+}
+
+#dessertPrice {
+  color: var(--red);
+  margin: 0.4vw;
+  font-size: 1.5vw;
+}
+
+.foodCard {
+  margin: 2vw;
+}
+
+.foodCard > img {
+  width: 16vw;
+  height: 16vw;
+}
+
+/* cart item list part */
+
+#itemCartContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1vw;
+  width: 100%;
+  border-bottom: 0.1vw solid grey;
+  padding-bottom: 1.5vw;
+  margin-bottom: 1.5vw;
+}
+
+#cartTitleEmpty {
+  display: block;
+  font-size: 2vw; 
+}
+
+#emptyCartPlaceholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1vw;
+  color: hsl(14, 25%, 72%);
+}
+
+#emptyCartImage {
+  width: 15vw;
+  height: 15vw;
+  display: block;
+}
+
+#emptyCartTextPlaceholder {
+  font-size: 2vw;
+  text-align: center;
+}
+
+#itemOrder {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#itemOrderDessertName {
+  font-size: 1.1vw;
+  margin: 0.6vw 0;
+}
+
+#itemOrderDessertPrice {
+  font-size: 1.1vw;
+}
+
+#itemOrderDessertPrice > b {
+  margin-right: 1vw;
+}
+
+#itemOrderDessertPrice > b + span {
+  margin-right: 1vw;
+}
+
+#cartTitleNotEmpty {
+  display: block;
+  font-size: 2.2vw;
+}
+
+#orderTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2vw;
+  margin: 1vw;
+}
+
+#removeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --hue: 0;
+  --saturation: 0%;
+  --lightness: 70%;
+  background-color: transparent;
+  /* padding: 0.2vw 0.5vw; */
+  border-radius: 20vw;
+  width: 1.5vw;
+  height: 1.5vw;
+  border: 0.2vw solid hsl(var(--hue), var(--saturation), var(--lightness));
+}
+
+.removeButton:hover {
+  --lightness: 40%;
+}
+
+.removeButton > img {
+  width: 1vw;
+  height: 1vw;
+  filter: invert(40%) sepia(0%) saturate(26%) hue-rotate(149deg) brightness(97%) contrast(91%);
+}
+
+.removeButton > img:hover {
+  filter: invert(74%) sepia(9%) saturate(0%) hue-rotate(232deg) brightness(98%) contrast(85%);
+}
+
+#carbonNeutral {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  margin: 1vw 0;
+  padding: 1vw;
+  /* background-color: var(--rose300) */
+}
+
+#confirmButton {
+  margin: 2vw 0;
+  background-color: var(--red);
+  width: 100%;
+  padding: 1vw;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.5vw;
+  color: var(--rose100);
+}
+
+#confirmButton:hover {
+  background-color: var(--darkerRed);
+}
+
+.redColor {
+  color: var(--red);
+}
+
+.greyColor {
+  color: var(--rose300);
+}
+
+.darkGreyColor {
+  color: var(--rose500);
+}
+
+/* order confirmation */
+
+#customAlertConfirmed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#confirmedContainer {
+  display: flex;
+  flex-direction: column;
+  top: 10vw;
+  left: 10vw;
+  background-color: white;
+  padding: 3vw;
+  border-radius: 20px;
+  max-height: 80%;
+  overflow: hidden;
+}
+
+#innerConfirmedContainer {
+  overflow: auto;
+  margin: 1vw;
+}
+
+#confirmedIcon {
+  width: 2vw;
+  height: 2vw;
+  display: block;
+  margin: 1vw 0;
+}
+
+#confirmedTitle {
+  font-size: 3vw;
+  display: block;
+  margin: 1vw 0;
+}
+
+#confirmedDescription {
+  display: block;
+  font-size: 1.5vw;
+  color: grey;
+}
+
+#orderSummaryContainer {
+  padding: 2vw;
+}
+
+#orderTotalContainerConfirmed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#orderTotalText {
+  font-size: 1.4vw;
+}
+
+#orderTotalBill {
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+#resetButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1vw;
+  font-size: 1.5vw;
+  border-radius: 50px;
+  background-color: var(--red);
+  color: var(--rose100);
+  border-width: 0;
+  /* border-color: ; */
+}
+
+#resetButton:hover {
+  background-color: var(--darkerRed);
+}
+
+/* order summary confirmed */
+
+.singleItemConfirmed {
+  padding: 2vw 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--rose300);
+}
+
+.singleItemLeftContainer {
+  display: inline-flex;
+  align-items: center;
+}
+
+.singleDessertImageConfirmed {
+  width: 5vw;
+  height: 5vw;
+  /* margin: 2vw; */
+}
+
+.singleDessertTextConfirmed {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 1vw;
+  /* align-items: flex-start; */
+}
+
+.singleDessertNameConfirmed {
+  margin: 0;
+  font-size: 1.5vw;
+}
+
+.singleDessertNameAndPriceConfirmed {
+  margin: 0;
+  font-size: 1.5vw;
+}
+
+.singleDessertNameConfirmed {
+  color: var(--red);
+  font-weight: bold;
+}
+
+.singleDessertPriceConfirmed {
+  color: var(--rose300);
+  font-size: 1.6vw;
+}
+
+.singleDessertTotalPrice {
+  font-size: 2vw;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    margin: 4vw;
+    flex-direction: column;
+  }
+  #dessertMenu {
+    width: 100%;
+  }
+  #cartItemList {
+    width: 100%;
+  }
+  #foodListCart {
+    display: flex;
+    flex-direction: column;
+  }
+  #mainTitle {
+    font-size: 8vw;
+  }
+  .foodCard {
+    margin: 2vw 0;
+  }
+  .foodCard > img {
+    width: 100%;
+    height: auto;
+  }
+  .addToCartButton {
+    bottom: 8vw;
+    left: 25vw;
+    width: 50vw;
+  }
+  .emptyCartButtonContainer {
+    padding: 3vw 5vw;
+  }
+  .emptyCartButtonContainer > img {
+    width: 6vw;
+    height: auto;
+  }
+  .emptyCartButtonContainer > span {
+    font-size: 4vw;
+  }
+  #dessertType {
+    font-size: 4vw;
+  }
+  #dessertName {
+    font-size: 4vw;
+  }
+  #dessertPrice {
+    font-size: 4vw;
+  }
+
+  .cartButtonContainer {
+    padding: 2vw 4vw;
+  }
+  .operationSymbol {
+    width: 6vw;
+    height: 6vw;
+  }
+  .operationSymbol > img {
+    width: 4vw;
+    height: 4vw;
+  }
+  .amountFood {
+    font-size: 4vw;
+    margin: 0 6vw;
+  }
+
+  #cartItemList {
+    background-color: var(--rose100);
+    border-radius: 10px;
+    margin: 4vw 0 0 0;
+    padding: 0 0 4vw 0;
+  }
+  #cartTitleEmpty {
+    font-size: 6vw;
+    margin: 4vw;
+  }
+  #emptyCartImage {
+    width: 40vw;
+    height: 40vw;
+  }
+  #emptyCartTextPlaceholder {
+    font-size: 4vw;
+  }
+
+
+  #cartTitleNotEmpty {
+    font-size: 6vw;
+    margin: 4vw;
+  }
+  #itemCartContainer {
+    margin: 4vw;
+    width: 90%;
+  }
+  #itemOrder {
+    margin: 2vw;
+  }
+  #itemOrderDessertName {
+    font-size: 4vw;
+  }
+  #itemOrderDessertPrice {
+    font-size: 4vw;
+  }
+  #removeButton {
+    width: 2vw;
+    height: 2vw;
+    margin: 2vw;
+  }
+  #orderTotal {
+    font-size: 4vw;
+    margin: 4vw;
+  }
+  #carbonNeutral {
+    font-size: 4vw;
+  }
+  #carbonNeutral > img {
+    width: 8vw;
+    height: 8vw;
+  }
+  #confirmButton {
+    margin: 4vw;
+    font-size: 4vw;
+    width: 90%;
+  }
+
+
+  #customAlertConfirmed {
+    bottom: -20vw;
+    height: 100%;
+  }
+  #confirmedContainer {
+    width: 94%;
+    height: 90%;
+    position: absolute;
+    bottom: -20vw;
+    left: 0;
+    max-height: 100%;
+    top: 14vw;
+  }
+  #innerConfirmedContainer {
+    margin: 4vw;
+  }
+  #confirmedIcon {
+    width: 10vw;
+    height: 10vw;
+  }
+  #confirmedTitle {
+    font-size: 10vw;
+  }
+  #confirmedDescription {
+    font-size: 4vw;
+  }
+  /* #orderSummaryContainer {
+    background-color: var(--rose300);
+  } */
+  .singleItemConfirmed {
+    margin: 2vw;
+    padding: 2vw;
+  }
+  .singleDessertImageConfirmed {
+    width: 15vw;
+    height: 15vw;
+  }
+  .singleDessertNameConfirmed {
+    font-size: 4vw;
+  }
+  .singleDessertPriceConfirmed {
+    font-size: 4vw;
+  }
+  .singleDessertTotalPrice {
+    font-size: 4vw;
+  }
+  #orderTotalContainerConfirmed {
+    margin: 4vw;
+  }
+  #orderTotalText {
+    font-size: 4vw;
+  }
+  #orderTotalBill {
+    font-size: 6vw;
+  }
+  #resetButton {
+    font-size: 4vw;
+    padding: 4vw;
+  }
+}
